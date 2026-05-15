@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Pink Aura Skincare</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Quicksand',sans-serif;
+}
+
+body{
+background:linear-gradient(to bottom,#fff0f6,#ffe4ef,#fff7fb);
+color:#555;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(10px);
+border-bottom:3px solid #ffcce5;
+}
+
+.nav-container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+color:#ff69b4;
+background:white;
+padding:10px 25px;
+border-radius:50px;
+border:3px solid #ffb6d9;
+box-shadow:0 5px 15px rgba(255,182,217,0.4);
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#ff69b4;
+font-weight:700;
+background:white;
+padding:10px 20px;
+border-radius:50px;
+border:3px solid #ffd1e6;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+background:#ff69b4;
+color:white;
+transform:translateY(-3px);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:150px 10%;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero-text{
+background:white;
+padding:50px;
+border-radius:40px;
+border:4px solid #ffd6ea;
+box-shadow:0 15px 30px rgba(255,182,193,0.3);
+}
+
+.hero-text h1{
+font-size:5rem;
+color:#ff69b4;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero-text p{
+font-size:1.2rem;
+line-height:2;
+background:#fff7fb;
+padding:20px;
+border-radius:25px;
+border:3px solid #ffd6ea;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+}
+
+.btn{
+padding:16px 35px;
+border:none;
+border-radius:50px;
+font-size:1rem;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+}
+
+.pink-btn{
+background:#ff69b4;
+color:white;
+border:3px solid white;
+box-shadow:0 10px 20px rgba(255,105,180,0.3);
+}
+
+.pink-btn:hover{
+transform:scale(1.05);
+}
+
+.white-btn{
+background:white;
+color:#ff69b4;
+border:3px solid #ffb6d9;
+}
+
+.white-btn:hover{
+background:#ffe4ef;
+}
+
+.hero-image img{
+width:100%;
+border-radius:40px;
+border:5px solid white;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+
+section{
+padding:120px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:3rem;
+color:#ff69b4;
+margin-bottom:20px;
+display:inline-block;
+background:white;
+padding:15px 35px;
+border-radius:50px;
+border:4px solid #ffd6ea;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+line-height:2;
+background:white;
+padding:25px;
+border-radius:30px;
+border:3px solid #ffd6ea;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:35px;
+border:4px solid #ffd6ea;
+box-shadow:0 10px 25px rgba(255,182,193,0.3);
+transition:0.4s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card span{
+font-size:3rem;
+display:block;
+margin-bottom:20px;
+}
+
+.card h3{
+color:#ff69b4;
+margin-bottom:20px;
+font-size:1.6rem;
+background:#fff0f6;
+padding:12px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+}
+
+.card p{
+line-height:2;
+background:#fff7fb;
+padding:18px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.product{
+background:white;
+border-radius:35px;
+overflow:hidden;
+border:4px solid #ffd6ea;
+box-shadow:0 10px 25px rgba(255,182,193,0.3);
+transition:0.4s;
+}
+
+.product:hover{
+transform:scale(1.03);
+}
+
+.product img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.product-info{
+padding:25px;
+}
+
+.product-info h3{
+color:#ff69b4;
+margin-bottom:15px;
+background:#fff0f6;
+padding:12px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+}
+
+.product-info p{
+line-height:2;
+background:#fff7fb;
+padding:15px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+}
+
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.review{
+background:white;
+padding:35px;
+border-radius:35px;
+border:4px solid #ffd6ea;
+box-shadow:0 10px 25px rgba(255,182,193,0.3);
+}
+
+.review p{
+line-height:2;
+background:#fff7fb;
+padding:20px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+margin-bottom:20px;
+}
+
+.review h4{
+color:#ff69b4;
+font-size:1.2rem;
+background:#fff0f6;
+display:inline-block;
+padding:10px 20px;
+border-radius:20px;
+border:3px solid #ffd6ea;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+background:white;
+padding:70px;
+border-radius:50px;
+border:5px solid #ffd6ea;
+text-align:center;
+box-shadow:0 15px 30px rgba(255,182,193,0.3);
+}
+
+.newsletter h2{
+font-size:3rem;
+color:#ff69b4;
+margin-bottom:20px;
+}
+
+.newsletter p{
+max-width:700px;
+margin:auto;
+line-height:2;
+background:#fff7fb;
+padding:25px;
+border-radius:25px;
+border:3px solid #ffd6ea;
+margin-bottom:30px;
+}
+
+.newsletter-box{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.newsletter-box input{
+padding:18px 25px;
+width:400px;
+border-radius:50px;
+border:3px solid #ffd6ea;
+outline:none;
+background:#fff7fb;
+}
+
+.newsletter-box button{
+padding:18px 35px;
+border:none;
+border-radius:50px;
+background:#ff69b4;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+padding:60px 10%;
+text-align:center;
+}
+
+footer h2{
+color:#ff69b4;
+font-size:2rem;
+margin-bottom:15px;
+background:white;
+display:inline-block;
+padding:15px 35px;
+border-radius:40px;
+border:4px solid #ffd6ea;
+}
+
+footer p{
+background:white;
+padding:20px;
+border-radius:25px;
+border:3px solid #ffd6ea;
+display:inline-block;
+margin-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-content{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:3.5rem;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">Pink Aura ✨</div>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Glow</a></li>
+<li><a href="#">Reviews</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>Soft Skin<br>Soft Life 🌸</h1>
+
+<p>
+Discover dreamy skincare products designed to hydrate,
+brighten, and nourish your skin naturally while giving
+you the perfect healthy glow every day.
+</p>
+
+<div class="buttons">
+<button class="btn pink-btn">Shop Now</button>
+<button class="btn white-btn">Glow Tips</button>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Why Everyone Loves Pink Aura</h2>
+
+<p>
+Our skincare collection combines cute aesthetics,
+luxurious ingredients, and healthy beauty routines
+to create soft glowing skin and confidence.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<span>🧴</span>
+<h3>Hydrating Creams</h3>
+<p>
+Deep moisture formulas that leave your skin
+soft, smooth, and naturally glowing all day.
+</p>
+</div>
+
+<div class="card">
+<span>✨</span>
+<h3>Glow Serums</h3>
+<p>
+Vitamin-rich serums designed to brighten your
+skin and create a healthy radiant shine.
+</p>
+</div>
+
+<div class="card">
+<span>🌸</span>
+<h3>Pink Clay Masks</h3>
+<p>
+Detoxifying masks that refresh your pores
+while keeping your skin soft and refreshed.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Best Sellers 💖</h2>
+
+<p>
+Explore our most-loved skincare essentials
+for glowing, healthy, and radiant skin.
+</p>
+
+</div>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Rose Glow Serum</h3>
+
+<p>
+A lightweight serum infused with rose extracts
+and vitamins for radiant glowing skin.
+</p>
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Cloud Moisturizer</h3>
+
+<p>
+Luxurious daily moisturizer that deeply hydrates
+and smooths dry skin beautifully.
+</p>
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-info">
+<h3>Pink Aura Mask</h3>
+
+<p>
+Refreshing clay face mask designed to detoxify,
+soften, and brighten your complexion.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Customer Reviews 🎀</h2>
+
+<p>
+Thousands of skincare lovers trust Pink Aura
+for glowing skin and luxurious self-care.
+</p>
+
+</div>
+
+<div class="reviews">
+
+<div class="review">
+
+<p>
+“My skin feels so soft and hydrated after using
+Pink Aura products. Everything feels luxurious.”
+</p>
+
+<h4>— Sophia</h4>
+
+</div>
+
+<div class="review">
+
+<p>
+“The glow serum completely transformed my skincare
+routine and made my skin look radiant.”
+</p>
+
+<h4>— Olivia</h4>
+
+</div>
+
+<div class="review">
+
+<p>
+“The packaging is adorable and the products work
+so well. I’m obsessed with this brand.”
+</p>
+
+<h4>— Amelia</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="newsletter">
+
+<h2>Join The Glow Club 💌</h2>
+
+<p>
+Subscribe for skincare tips, beauty inspiration,
+exclusive launches, and cute self-care ideas.
+</p>
+
+<div class="newsletter-box">
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Pink Aura ✨</h2>
+
+<p>
+Luxury skincare for glowing, soft, and healthy skin.
+</p>
+
+</footer>
+
+</body>
+</html>
